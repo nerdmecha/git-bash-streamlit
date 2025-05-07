@@ -1,17 +1,18 @@
 from openai import OpenAI
 import streamlit as st
 
-# Lastest Edited | 2025 may 06th tue pm 04:32 utc+09:00
-# X(Twitter) @shininggrail | Discord nerdmecha#1806 | GameJolt @nerdmecha
+# Lastest Edited | 2025 may 07th wed pm 09:30 utc+09:05
+# X(Twitter) @shininggrail | Discord nerdmecha#1806 | GameJolt @nerdmecha | Bluesky @nerdmecha.bsky.social
 
 with st.sidebar:
     openai_api_key = st.secrets.get("OPENAI_API_KEY") or st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
-    "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
-    "[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
-    "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
+    # Get an OpenAI API key https://platform.openai.com/account/api-keys
+    # View the source code https://github.com/streamlit/llm-examples/blob/main/Chatbot.py
+    # Open in GitHub Codespaces https://github.com/codespaces/badge.svg https://codespaces.new/streamlit/llm-examples?quickstart=1
 
 st.title("💬 Chatbot")
 st.caption("🚀 Powered by OpenAI")
+
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
 
